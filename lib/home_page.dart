@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'appbar.dart';
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class HomePage extends StatelessWidget {
             Text('Hello, Friend'),
             Text("Here's what's left for you:"),
             ListView.builder(
-              itemBuilder: (context, index) => TodoCard(todosByCategory(index)),
+              itemBuilder: (context, index) => CategoryCard(categories[index]),
             ),
           ],
         ),
